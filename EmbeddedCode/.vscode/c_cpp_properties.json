@@ -4,7 +4,7 @@
             "name": "esp32:esp32:esp32c6",
             "includePath": [
                 "${workspaceFolder}/**",
-                "C:\\Users\\borisg912\\AppData\\Local\\Temp\\vs-arduino-sketch-yaS6PD\\EmbeddedCode",
+                "C:\\Users\\borisg912\\AppData\\Local\\Temp\\vs-arduino-sketch-UH0J9d\\EmbeddedCode",
                 "C:\\Users\\borisg912\\AppData\\Local\\Arduino15\\packages\\esp32\\tools\\esp32c6-libs\\3.3.11/qio_qspi/include",
                 "C:\\Users\\borisg912\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.3.11\\cores\\esp32",
                 "C:\\Users\\borisg912\\AppData\\Local\\Arduino15\\packages\\esp32\\hardware\\esp32\\3.3.11\\variants\\esp32c6",

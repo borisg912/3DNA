@@ -1,18 +1,25 @@
 #include <Adafruit_NeoPixel.h>
 
 // HW Pins
-#define I2cSda 8
-#define I2cScl 8
+#define I2cSda 22
+#define I2cScl 23
+#define BmsInt 5
 #define BmsOtg 21
-#define MuxS0 8
-#define MuxS1 9
-#define MuxS2 10
-#define MuxS3 11
-#define MuxResEn 0
+#define BmsCe 4
+#define BuckPwrOK 3
+#define MuxS0 11
+#define MuxS1 10
+#define MuxS2 9
+#define MuxS3 8
+#define MuxResEn 18
 #define MuxResOut 0
-#define MuxNeoPixelEn 0
-#define MuxNeoPixelOut 0
-#define HelixNeoPixel 0
+#define MuxNeoPixelEn 15
+#define MuxNeoPixelOut 19
+#define HelixNeoPixel 20
+#define TouchButton 2
+#define BackboardButton 6
+#define LightSensor 1
+#define AudioPlayer 7
 
 // Default values
 #define DnaBaseCount 13 // includes 12 in helix + 1 bonus in foundation

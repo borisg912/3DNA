@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="5457382c-d535-417a-bad6-531d72090703"
-    Publisher="CN=borisg912"
+    Name="UnifyDev.Project3DNA"
+    Publisher="CN=UnifyDev"
     Version="1.0.0.0" />
 
   <mp:PhoneIdentity PhoneProductId="5457382c-d535-417a-bad6-531d72090703" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>AppWindows</DisplayName>
-    <PublisherDisplayName>borisg912</PublisherDisplayName>
+    <DisplayName>3DNA</DisplayName>
+    <PublisherDisplayName>UnifyDev</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,18 +32,35 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="AppWindows.App">
       <uap:VisualElements
-        DisplayName="AppWindows"
-        Square150x150Logo="Assets\Square150x150Logo.png"
+        DisplayName="3DNA"
+        Description="3DNA companion app for Windows"
         Square44x44Logo="Assets\Square44x44Logo.png"
-        Description="AppWindows"
+        Square150x150Logo="Assets\Square150x150Logo.png"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile >
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
       </uap:VisualElements>
+      <Extensions>
+        <uap:Extension Category="windows.protocol">
+          <uap:Protocol Name="threedna"/>
+        </uap:Extension>
+      </Extensions>
     </Application>
   </Applications>
 
   <Capabilities>
-    <Capability Name="internetClient" />
+    <Capability Name="allJoyn"/>
+    <Capability Name="internetClientServer"/>
+    <Capability Name="privateNetworkClientServer"/>
+    <uap:Capability Name="musicLibrary"/>
+    <uap:Capability Name="objects3D"/>
+    <DeviceCapability Name="bluetooth"/>
+    <DeviceCapability Name="proximity"/>
   </Capabilities>
 </Package>

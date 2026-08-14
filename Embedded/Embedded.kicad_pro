@@ -74,6 +74,54 @@
         [
           "courtyards_overlap|128002500|49907500|58f9050c-60d6-4837-aceb-8f44aebe7278|9d960ed9-06ec-4cce-82d2-0c56f66f6416",
           "GND pad under IC"
+        ],
+        [
+          "lib_footprint_mismatch|155800000|53427500|6584d31e-73d0-4bef-8c62-ade04c7e56dc|00000000-0000-0000-0000-000000000000",
+          "efn"
+        ],
+        [
+          "lib_footprint_mismatch|158350000|59175000|3eaae50a-7c93-4f77-81c6-adb1cfcacf07|00000000-0000-0000-0000-000000000000",
+          "efn"
+        ],
+        [
+          "silk_edge_clearance|141050000|143000000|58405378-3516-4704-ba87-e7155c83d34e|8937c934-f075-42f4-8861-efd689033775",
+          "ESP antenna"
+        ],
+        [
+          "silk_edge_clearance|159050000|143000000|58405378-3516-4704-ba87-e7155c83d34e|14d121d4-a558-4393-bf55-0c138984492f",
+          "ESP antenna"
+        ],
+        [
+          "silk_over_copper|114000000|39000000|aff708df-0493-4a46-85c0-938b653f212d|ceb5436b-36ed-4f99-8433-fa890c75a7ea",
+          "ern"
+        ],
+        [
+          "silk_over_copper|162500000|59120000|157e2c7c-b566-4347-b1d4-37cde8095e0e|404b1e5a-d0b8-4700-be4c-80e051b70c87",
+          ""
+        ],
+        [
+          "silk_over_copper|167295000|114000000|60ad8fe3-8e5c-480d-911a-2c5e5ec57564|09011413-841a-4c75-bb60-d9f0eadb793d",
+          "ern"
+        ],
+        [
+          "silk_over_copper|168145000|131000000|60ad8fe3-8e5c-480d-911a-2c5e5ec57564|6997f27b-3e79-41a6-a3e3-a08ff93bb8ce",
+          "ern"
+        ],
+        [
+          "silk_over_copper|171400000|42000000|32e81b5b-f350-4c7e-a6a0-fc18bd74d2ea|a0a95c3c-cbb1-4588-a12d-09303721476a",
+          "ern"
+        ],
+        [
+          "silk_overlap|137540000|109120000|02523dd6-a4b5-402c-b145-71633614c204|6afaffc3-669f-48e8-a490-9b29029c240e",
+          "ern"
+        ],
+        [
+          "silk_overlap|160270000|112000000|02523dd6-a4b5-402c-b145-71633614c204|e8ceb8c4-47ec-4219-a2c6-4641b279aa96",
+          "ern"
+        ],
+        [
+          "silk_overlap|162540000|109120000|02523dd6-a4b5-402c-b145-71633614c204|92199d82-d718-417e-bc9b-901013a68b6b",
+          "ern"
         ]
       ],
       "meta": {
