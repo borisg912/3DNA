@@ -3,9 +3,9 @@
 // HW Pins
 #define I2cSda 22
 #define I2cScl 23
-#define BmsInt 5
+#define BmsInt 6
 #define BmsOtg 21
-#define BmsCe 4
+#define BmsCe 16
 #define BuckPwrOK 3
 #define MuxS0 11
 #define MuxS1 10
@@ -17,9 +17,11 @@
 #define MuxNeoPixelOut 19
 #define HelixNeoPixel 20
 #define TouchButton 2
-#define BackboardButton 6
+#define BackboardButton 7
 #define LightSensor 1
-#define AudioPlayer 7
+#define AudioPlayer 5
+#define FanControl 4
+#define GyroInt 17
 
 // Default values
 #define DnaBaseCount 13 // includes 12 in helix + 1 bonus in foundation
