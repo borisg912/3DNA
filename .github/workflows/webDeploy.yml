@@ -33,11 +33,11 @@ jobs:
 
       - name: Transfer Static Site to VPS
         run: |
-          rsync -avz --delete ./src/pr-website/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/threeDnaWebsite/
+          rsync -avz --delete ./html/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/threeDnaWebsite/
 
       - name: Transfer .NET Service to VPS
         run: |
-          rsync -avz --delete ./dist/api/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/threeDnaDimension/
+          rsync -avz --delete ./dist/dimension/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/threeDnaDimension/
 
       - name: Restart .NET Systemd Service
         run: |
