@@ -1,0 +1,38 @@
+name: Deploy Project .NET Service
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'WebService/**' # Only triggers if files in this folder change
+  workflow_dispatch:
+
+jobs:
+  deploy-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Publish .NET Service
+        run: dotnet publish WebService/DimensionCloud.csproj -c Release -o ./dist/api
+
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Add Host to Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Transfer .NET Service
+        run: |
+          rsync -avz --delete ./dist/api/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/threeDnaDimension/
+
+      - name: Restart Systemd Service
+        run: |
+          ssh ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }} "sudo systemctl restart threeDnaDimensionSvc.service"

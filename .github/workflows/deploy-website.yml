@@ -1,0 +1,27 @@
+name: Deploy Project website
+
+on:
+  push:
+    branches: [ "main" ]
+    paths:
+      - 'Website/**' # Only triggers if files in this folder change
+  workflow_dispatch:
+
+jobs:
+  deploy-site:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: webfactory/ssh-agent@v0.9.0
+        with:
+          ssh-private-key: ${{ secrets.VPS_SSH_KEY }}
+
+      - name: Add Host to Known Hosts
+        run: |
+          mkdir -p ~/.ssh
+          ssh-keyscan -H ${{ secrets.VPS_HOST }} >> ~/.ssh/known_hosts
+
+      - name: Transfer Static Site
+        run: |
+          rsync -avz --delete ./Website/ ${{ secrets.VPS_USER }}@${{ secrets.VPS_HOST }}:/var/www/threeDnaWebsite/
