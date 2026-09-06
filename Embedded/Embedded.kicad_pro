@@ -631,7 +631,7 @@
       "netlist": "",
       "plot": "../../../Downloads/board/",
       "specctra_dsn": "",
-      "step": "BoardModel.step",
+      "step": "../BoardModel.step",
       "vrml": ""
     },
     "page_layout_descr_file": ""
